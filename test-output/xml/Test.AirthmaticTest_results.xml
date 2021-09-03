@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Initial Test"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.018">
+  <properties />
+  
+  
+            <testcase name="callME2" time="0.000" classname="Test.AirthmaticTest" />
+                <testcase name="Math2" time="0.001" classname="Test.AirthmaticTest" />
+                <testcase name="Math1" time="0.013" classname="Test.AirthmaticTest" />
+                <testcase name="callME3" time="0.003" classname="Test.AirthmaticTest" />
+                <testcase name="callME" time="0.001" classname="Test.AirthmaticTest" />
+      
+</testsuite>

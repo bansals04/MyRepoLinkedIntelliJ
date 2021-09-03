@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Initial Test"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.001">
+  <properties />
+  
+  
+            <testcase name="test" time="0.000" classname="Test.InterfacesPractice.LambdaTest" />
+                <testcase name="test" time="0.001" classname="Test.InterfacesPractice.LambdaTest" />
+                <testcase name="test" time="0.000" classname="Test.InterfacesPractice.LambdaTest" />
+                <testcase name="test" time="0.000" classname="Test.InterfacesPractice.LambdaTest" />
+      
+</testsuite>

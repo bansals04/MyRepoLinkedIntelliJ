@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test name="shubhi" >
+        <classes>
+            <class name="Test.Selenium.SeleniumPractice"/>
+                     <class name="Test.AirthmaticTest"/>
+                <class name="Test.AnnotationsPracticeTest"/>
+                <class name="Test.AnootationPracticeTwoTest"/>
+                <class name="Test.GenerateRandomEmail"/>
+            </classes>
+        </test>
+
+        <test name="bansal" >
+            <classes>
+          <class name="Test.InterfacesPractice.ImplementingClass"/>
+                <class name="Test.InterfacesPractice.LambdaTest"/>
+                <class name="Test.InterfacesPractice.PracticeLambdaTest"/>
+                <class name="Test.ExamplesInitializationTest"/>
+                <class name="Test.Hello"/>
+                <class name="Test.MySqlTest"/>
+                <class name="Test.PracticeConstructorTest"/>
+                <class name="Test.ReadFileTest"/>
+                <class name="Test.SauceDemoTest"/>
+                <class name="Test.SeleniumTest"/>
+                <class name="Test.TakeElementScreenshot"/>
+                <class name="Test.WebTablePracticeTest"/>
+                <class name="Test.ArtOfTesting.ArtOfTestingTest"/>
+                <class name="Test.IncedoTest"/>
+                <class name="Test.IncedoTest1"/>
+
+
+            </classes>
+        </test>
+
+
+
+    </suite>

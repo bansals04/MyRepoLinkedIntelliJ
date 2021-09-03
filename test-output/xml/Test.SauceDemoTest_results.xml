@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Initial Test"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="7.243">
+  <properties />
+  
+  
+            <testcase name="loginViaExceldataTestCase" time="1.187" classname="Test.SauceDemoTest" />
+                <testcase name="loginViaExceldataTestCase" time="1.211" classname="Test.SauceDemoTest" />
+                <testcase name="loginViaExceldataTestCase" time="1.282" classname="Test.SauceDemoTest" />
+                <testcase name="loginTestCase" time="2.152" classname="Test.SauceDemoTest" />
+                <testcase name="loginTestCase" time="1.411" classname="Test.SauceDemoTest" />
+      
+</testsuite>
