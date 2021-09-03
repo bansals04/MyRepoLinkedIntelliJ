@@ -42,11 +42,14 @@ public class ArtOfTestingTest extends BaseClass {
 
      @Test(dataProvider="userLists", dataProviderClass = ArtOfTestingTestData.class)
         public void userTest(int key, String val){
-
          System.out.println(key);
-
          System.out.println(val);
          System.out.println("wedw");
 
+     }
+
+     @Test
+    public void testPush(){
+         System.out.println("I am testing push");
      }
 }
