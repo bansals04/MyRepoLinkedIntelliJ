@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Test') {
+            steps {
+		              	  echo  'Test stage started'
+                       bat "mvn test"
+				               echo 'Test stage completed'
+                  }
+            
+            }
+    }
+}
