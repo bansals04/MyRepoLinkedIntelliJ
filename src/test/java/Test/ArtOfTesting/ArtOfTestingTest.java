@@ -27,7 +27,7 @@ public class ArtOfTestingTest extends BaseClass {
         artOfTestingPage= PageFactory.initElements(BaseClass.driver, ArtOfTestingPage.class);
     }
 
-    //@Test(dataProvider = "ArtOfTestingDateset2", dataProviderClass = ArtOfTestingTestData.class)
+    @Test(dataProvider = "ArtOfTestingDateset2", dataProviderClass = ArtOfTestingTestData.class)
     public void Test1(ArtOfTesting artOfTestData) throws InterruptedException {
         driver.get("https://artoftesting.com/samplesiteforselenium#");
 
