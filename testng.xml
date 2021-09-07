@@ -29,6 +29,8 @@
                 <class name="Test.ArtOfTesting.ArtOfTestingTest"/>
                 <class name="Test.IncedoTest"/>
                 <class name="Test.IncedoTest1"/>
+                <class name="Test.PdfTest"/>
+                <class name="Test.AlertTest"/>
 
 
             </classes>
