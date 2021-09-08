@@ -1,5 +1,6 @@
 package Test;
 
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -20,7 +21,7 @@ public class IncedoTest {
 */
 int[] input={2,2,8,4,5,3,6,7,3,8};
 
-    //@Test
+    @Test
     public void intarray(){
 
 
@@ -86,5 +87,62 @@ int[] input={2,2,8,4,5,3,6,7,3,8};
         }
 
         System.out.println(hmap);
+    }
+
+
+    @Test
+    public void StringPalindrome(){
+        String pali= "asxsax";
+
+        int l= pali.length();
+        int flag =0;
+        for (int i=0; i<=l-1; i++){
+            if(pali.charAt(i)!=pali.charAt(l-1-i)){
+                flag= 1;
+            }
+        }
+
+        if(flag==0){
+            System.out.println("String is palidrome");
+        }
+        else{
+            System.out.println("String is NOT palindrome");
+        }
+    }
+
+
+    @Test
+    public void numberPalindrome(){
+
+       int abc= 5225;
+        int n  = 5225;
+
+        int reversed=0;
+
+        while(n != 0){
+            int reminder = n%10;
+            System.out.println("I am reminder  __" + reminder);
+            System.out.println();
+
+
+            reversed = reversed * 10 + reminder;
+            System.out.println("I am reversed  __" + reversed);
+            System.out.println();
+
+
+            n/= 10;
+            System.out.println("I am n  __" + n);
+            System.out.println();
+
+        }
+
+        if (abc==reversed){
+            System.out.println("Number is palindrome");
+        }
+        else{
+            System.out.println("Number is NOT palindrome");
+        }
+
+
     }
 }
