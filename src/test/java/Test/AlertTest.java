@@ -6,6 +6,9 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class AlertTest extends BaseClass {
@@ -52,5 +55,28 @@ public class AlertTest extends BaseClass {
     }
 
 
+    @Test
+    public void listVsSet(){
+        List<String> list = new ArrayList<>();
+
+        list.add("2");
+        list.add("5");
+        list.add("1");
+        list.add("5");
+
+        System.out.println(list);
+        System.out.println(list.get(0));//Can access the list by index
+        //LIST is ordered, indexed and can have duplicate values
+
+        Set<String> ss = new HashSet<>();
+
+        ss.add("2");
+        ss.add("5");
+        ss.add("1");
+        ss.add("5");
+        System.out.println(ss);
+        //Set is unordered, unindexed. Set donot have duplicate values.
+
+    }
 
 }
