@@ -14,7 +14,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 
 public class ArtOfTestingTest extends BaseClass {
@@ -41,7 +43,7 @@ public class ArtOfTestingTest extends BaseClass {
 
 
      @Test(dataProvider="userLists", dataProviderClass = ArtOfTestingTestData.class)
-        public void userTest(int key, String val){
+     public void userTest(int key, String val){
          System.out.println(key);
          System.out.println(val);
          System.out.println("wedw");
@@ -51,5 +53,34 @@ public class ArtOfTestingTest extends BaseClass {
      @Test
     public void testPush(){
          System.out.println("I am testing push");
+     }
+
+     @Test
+    public void findNumberOfCharinAString(){
+        int num= 189287886;
+
+        String s = "ABCDABCW";
+        int length1= s.length();
+
+         System.out.println(length1+ "___ length of string s");
+        HashMap<Character, Integer> hmap = new HashMap<>();
+
+        for(int i=0; i<=s.length()-1; i++){
+            int val =1;
+            if(hmap.containsKey(s.charAt(i))){
+
+                hmap.put(s.charAt(i), ++val);
+            }
+            else{
+                hmap.put(s.charAt(i), val);
+            }
+         }
+
+        for(Map.Entry<Character, Integer> hh : hmap.entrySet()){
+            System.out.println(hh);
+
+        }
+
+
      }
 }
