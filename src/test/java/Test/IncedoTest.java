@@ -3,8 +3,10 @@ package Test;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class IncedoTest {
 /*
@@ -19,7 +21,7 @@ public class IncedoTest {
     out:6
 
 */
-int[] input={2,2,8,4,5,3,6,7,3,8};
+    int[] input={2,2,8,4,5,3,6,7,3,8};
 
     @Test
     public void intarray(){
@@ -115,7 +117,7 @@ int[] input={2,2,8,4,5,3,6,7,3,8};
     public void numberPalindrome(){
 
        int abc= 5225;
-        int n  = 5225;
+        int n  = abc;
 
         int reversed=0;
 
@@ -144,5 +146,24 @@ int[] input={2,2,8,4,5,3,6,7,3,8};
         }
 
 
+    }
+
+    @Test
+    public void missingNumberinArray(){
+        int checkTill = 12;
+        int[] miss= {1,2,4,5,7,8,9,11};
+        int l = miss.length;
+        List<Integer> list = new ArrayList<>();
+        for(int i =0; i<=l-1; i++){
+            list.add(miss[i]);
+        }
+        System.out.println(list);
+
+      while(checkTill>=1){
+            if(!list.contains(checkTill)){
+                System.out.println("Missing number is " + checkTill);
+            }
+            checkTill--;
+        }
     }
 }
