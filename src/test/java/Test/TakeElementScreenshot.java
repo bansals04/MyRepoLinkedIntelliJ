@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.*;
 
 
 public class TakeElementScreenshot extends BaseClass {
@@ -28,6 +29,30 @@ public class TakeElementScreenshot extends BaseClass {
         File src= driver.findElement(By.id("user-name")).getScreenshotAs(OutputType.FILE);
         FileHandler.copy(src, new File(path));
 
+
+    }
+
+    @Test
+    public void shiftZeroInIntegerArray(){
+        int[] a = {1,0,9,5,0,8};
+
+        int lengthOfAr = a.length;
+
+        int count=0;
+
+        for(int i=0; i<lengthOfAr; i++){
+
+            if(a[i] !=  0){
+                a[count]= a[i];
+                count++;
+            }
+        }
+
+
+        while (count < lengthOfAr)
+            a[count++] = 0;
+
+        System.out.println(Arrays.toString(a));
 
     }
 }

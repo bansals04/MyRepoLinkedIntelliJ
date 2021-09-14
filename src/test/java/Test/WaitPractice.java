@@ -36,8 +36,25 @@ public class WaitPractice  extends BaseClass {
         System.out.println(ReturnPolicyTitle);
         Assert.assertEquals(ReturnPolicyTitle, "Returnpolicy Store Online - Buy Returnpolicy Online at Best Price in India | Flipkart.com");
         Thread.sleep(900);
-
-
-
     }
+
+    @Test
+    public void fib(){
+        String s= "KAYLqYAK";
+
+        int l = s.length();
+        int flag=0;
+        for(int i =0; i<=(l-1)/2; i++){
+            if(s.charAt(i)!=s.charAt(l-1-i)){
+                flag =1;
+            }
+        }
+        if(flag==0){
+            System.out.println("String is palindrome");
+        }
+        else{
+            System.out.println("String is NOT palindrome");
+        }
+    }
+
 }

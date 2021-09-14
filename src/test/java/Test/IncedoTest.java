@@ -3,10 +3,7 @@ package Test;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class IncedoTest {
 /*
@@ -165,5 +162,49 @@ public class IncedoTest {
             }
             checkTill--;
         }
+    }
+
+
+    @Test
+    public void maxAndMin(){
+        int[] n = {6,3,22,0,11,34,1};
+        List<Integer> list= new ArrayList<>();
+        for (int i=0; i<= n.length-1; i++){
+            list.add(n[i]);
+        }
+
+        System.out.println(list);
+        Collections.sort(list);
+        System.out.println(list);
+
+        int maxsize = list.size();
+        int maxx=list.get(maxsize-1);
+        System.out.println("maximum number___" + maxx);
+
+        System.out.println("Minimum number___"+list.get(0));
+
+    }
+
+    @Test
+    public void vowels(){
+        String s= "awdaeqi mko un";
+        char[] ch =new char[s.length()];
+        for (int i=0; i<=s.length()-1; i++){
+            ch[i] = s.charAt(i);
+        }
+        int count =0;
+        for(char ch1 : ch) {
+            switch (ch1) {
+                case 'a':
+                case'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                  count++;
+                  break;
+            }
+        }
+        System.out.println("VOWELS are : __" + count);
+
     }
 }

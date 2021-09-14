@@ -15,8 +15,9 @@ public class AlertTest extends BaseClass {
 
 
 
-    @Test
+    @Test(priority = 0)
     public void testAlerts() throws InterruptedException {
+        System.out.println("testAlerts test started________________________________________________");
         driver.get("http://www.seleniumframework.com/Practiceform/");
         driver.findElement(By.id("alert")).click();
 
@@ -55,8 +56,9 @@ public class AlertTest extends BaseClass {
     }
 
 
-    @Test
+    @Test(priority = 1)
     public void listVsSet(){
+        System.out.println("ListVsSet test started________________________________________________");
         List<String> list = new ArrayList<>();
 
         list.add("2");

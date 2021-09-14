@@ -42,7 +42,7 @@ public class LambdaTest{
 
 
     @Test(dataProvider = "data")
-    public void test(String vegId, String vegVal)
+    public void testLambda(String vegId, String vegVal)
     {
         System.out.println("Vegetable ID: " + vegId + " : " + "Vegetable Name: " + vegVal);
     }
