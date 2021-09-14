@@ -5,10 +5,16 @@
     <test name="shubhi" >
         <classes>
             <class name="Test.Selenium.SeleniumPractice"/>
-                     <class name="Test.AirthmaticTest"/>
-                <class name="Test.AnnotationsPracticeTest"/>
-                <class name="Test.AnootationPracticeTwoTest"/>
-                <class name="Test.GenerateRandomEmail"/>
+            <class name="Test.AirthmaticTest"/>
+            <class name="Test.AnnotationsPracticeTest"/>
+            <class name="Test.AnootationPracticeTwoTest"/>
+            <class name="Test.GenerateRandomEmail"/>
+            <class name="Test.WaitPractice">
+                <methods>
+                    <include name="waitTests"/>
+                    <include name="fib"/>
+                </methods>
+            </class>
             </classes>
         </test>
 
