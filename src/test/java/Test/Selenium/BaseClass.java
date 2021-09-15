@@ -33,7 +33,7 @@ public class BaseClass {
         //driver = new FirefoxDriver();
     }
 
-    //@AfterClass
+    @AfterClass
     public void closeBr(){
         driver.close();
     }
