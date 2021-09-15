@@ -4,6 +4,7 @@ package Test;
 import Test.Selenium.BaseClass;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -81,4 +82,9 @@ public class AlertTest extends BaseClass {
 
     }
 
+    @Test
+    public void IamFailure(){
+
+        Assert.assertTrue("wdw".equals("wdmw"));
+    }
 }

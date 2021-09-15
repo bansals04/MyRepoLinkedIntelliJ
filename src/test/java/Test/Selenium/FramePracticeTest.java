@@ -83,15 +83,9 @@ public class FramePracticeTest extends BaseClass {
               //  a.click();
             }
         }
-
-
-
-
-
-
     }
 
-    //@Test
+    @Test
     public void tabsTest() throws InterruptedException {
 
         driver.get("https://www.google.co.in");
@@ -152,5 +146,14 @@ public class FramePracticeTest extends BaseClass {
         System.out.println(windowHandle2);
 
 
+    }
+
+    @Test
+    public void verifyTakingScreenshot() throws InterruptedException {
+        driver.get("https://www.airbnb.co.in/");
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//input[@name='quqqery']")).click();
+
+        driver.findElement(By.xpath("//li[@id='bigsearch-query-detached-query-suggestion-0' and @role='option']")).click();
     }
 }
