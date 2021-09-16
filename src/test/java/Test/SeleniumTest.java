@@ -64,4 +64,35 @@ public class SeleniumTest extends BaseClass {
         boolean b = sumInIntArray();
         System.out.println(b);
     }
+
+
+    @Test
+    public void sumInIntArray11() {
+        int[] arr = {1, 0, 6, 5, 4};
+        int sumShallBe = 3;
+        int count =0;
+        int case1=0;
+
+        System.out.println("Length of array___" + arr.length );
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        for(int i=0; i<arr.length; i++){
+            count ++;
+            int diff = sumShallBe-arr[i];
+
+            if(hashMap.containsKey(diff)){
+                System.out.println("Two number with sum " + sumShallBe + " exists.");
+                case1 = 1;
+                System.out.println("I am case1 value" + case1);
+                break;
+            }
+            else {
+                hashMap.put(arr[i], i);
+            }
+        }
+
+        if(case1 !=1) {
+            System.out.println("Two number with sum " + sumShallBe + " DO NOT exists.");
+
+        }
+    }
 }
