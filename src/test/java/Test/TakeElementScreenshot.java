@@ -34,22 +34,17 @@ public class TakeElementScreenshot extends BaseClass {
 
     @Test
     public void shiftZeroInIntegerArray(){
-        int[] a = {1,0,9,5,0,8};
+        int[] a = {1,0,9,0,5,7,0,8};
 
-        int lengthOfAr = a.length;
+        int length = a.length;
+        int count =0;
+        for(int i=0; i<length; i++){
+            if(a[i]!=0){
+                a[count++] = a[i];
 
-        int count=0;
-
-        for(int i=0; i<lengthOfAr; i++){
-
-            if(a[i] !=  0){
-                a[count]= a[i];
-                count++;
             }
         }
-
-
-        while (count < lengthOfAr)
+        while(count<length)
             a[count++] = 0;
 
         System.out.println(Arrays.toString(a));

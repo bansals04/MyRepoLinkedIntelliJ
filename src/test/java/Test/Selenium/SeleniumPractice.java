@@ -22,6 +22,9 @@ public class SeleniumPractice extends BaseClass  {
 
     @BeforeMethod
     public void initializationMethod(){
+
+        //initElements(): initElements is a static method in Page Factory class.
+        // Using the initElements method, one can initialize all the web elements located by @FindBy annotation.
          amazonPage = PageFactory.initElements(BaseClass.driver, AmazonPage.class);
          fashionPage = PageFactory.initElements(BaseClass.driver, FashionPage.class);
          propertiesFile = new PropertiesFile();

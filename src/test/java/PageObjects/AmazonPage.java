@@ -72,5 +72,7 @@ public class AmazonPage {
 
         }
 
+        e2.forEach(e1 -> System.out.println(e1.getText()));
+
     }
 }
