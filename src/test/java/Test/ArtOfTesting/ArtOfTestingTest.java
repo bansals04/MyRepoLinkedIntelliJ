@@ -4,6 +4,10 @@ import DataModels.ArtOfTesting;
 import Pages.ArtOfTestingPage;
 import Test.Selenium.BaseClass;
 import TestData.ArtOfTestingTestData;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -13,8 +17,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import sun.net.www.http.HttpClient;
 
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -41,18 +48,12 @@ public class ArtOfTestingTest extends BaseClass {
         Thread.sleep(9000);
      }
 
-
      @Test(dataProvider="userLists", dataProviderClass = ArtOfTestingTestData.class)
      public void userTest(int key, String val){
          System.out.println(key);
          System.out.println(val);
          System.out.println("wedw");
 
-     }
-
-     @Test
-    public void testPush(){
-         System.out.println("I am testing push");
      }
 
      @Test
@@ -80,7 +81,34 @@ public class ArtOfTestingTest extends BaseClass {
             System.out.println(hh);
 
         }
+     }
 
 
+     @Test(priority = -1)
+    public void checkBrokenImage() throws IOException {
+        driver.get("https://the-internet.herokuapp.com/broken_images");
+
+        List<WebElement> ls = driver.findElements(By.tagName("img"));
+         System.out.println(ls.size()+ ": this is ls size()");
+
+        for(WebElement oneImageLink : ls){
+            if(oneImageLink != null) {
+
+                CloseableHttpClient client = HttpClientBuilder.create().build();
+                HttpGet request = new HttpGet(oneImageLink.getAttribute("src"));
+                HttpResponse response = client.execute(request);
+
+                if (response.getStatusLine().getStatusCode() != 200) {
+                    System.out.println("response.getStatusLine() is :__    " + response.getStatusLine());
+                    System.out.println("======================================================================================================");
+                    System.out.println("response.getEntity() is :__    " + response.getEntity());
+                    System.out.println("======================================================================================================");
+                    System.out.println("response.getLocale() is :__    " + response.getLocale());
+                    System.out.println("======================================================================================================");
+
+                    System.out.println(oneImageLink.getAttribute("outerHTML") + " :  is broken............... ");
+                }
+            }
+        }
      }
 }

@@ -5,6 +5,7 @@ import PageObjects.FashionPage;
 import Test.CustomListener;
 import Resources.PropertiesFile;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -12,6 +13,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 @Listeners(CustomListener.class)
