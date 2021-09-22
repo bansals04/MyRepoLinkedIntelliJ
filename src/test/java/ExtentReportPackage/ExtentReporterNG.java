@@ -8,6 +8,7 @@ import org.testng.ISuite;
 import org.testng.ISuiteResult;
 import org.testng.ITestContext;
 import org.testng.xml.XmlSuite;
+import org.uncommons.reportng.HTMLReporter;
 
 import java.io.File;
 import java.util.List;
@@ -16,9 +17,11 @@ import java.util.Map;
 public class ExtentReporterNG implements IReporter {
 
     public static ExtentReports extentReports;
+    public static HTMLReporter htmlReporter;
 
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
                                String outputDirectory) {
+
 
 
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter("C:\\Users\\shubhi.bansal\\IdeaProjects\\Maven003\\test-output\\" + "MyExtent.html");
